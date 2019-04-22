@@ -1,0 +1,19 @@
+<ul>
+  <div *ngIf="authService.isAuthenticated()">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+
+  </div>
+  <div *ngIf="!authService.isAuthenticated()">
+    
+      <li style="float:right"><a class="active" id="singup"  routerLink="/singup">Register</a></li>
+      <li style="float:right; padding-right: 5px"><a class="active" id="singin" routerLink="/singin">LogIn</a></li>
+
+  </div>
+  <ng-template #name [ngIf]="authService.isAuthenticated()">
+      <li style="float:right"><a class="active" id="logOut" (click)="logout()"  >logOut</a></li>
+  </ng-template>
+  
+   
+  </ul>

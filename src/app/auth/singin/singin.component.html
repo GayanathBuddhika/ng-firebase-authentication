@@ -1,0 +1,21 @@
+<div class="container">
+    
+    <h3 style="text-align: center">Singin From</h3>
+          <form  (ngSubmit)="onSingin(fa)" #fa="ngForm">
+    
+              <div class="from-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" ngModel class="form-control">
+              </div>
+              
+              <div class="from-group"y>
+                  <label for="password">password</label>
+                  <input type="password" name="password" id="password" ngModel class="form-control"> 
+                </div>
+            
+                <button class="btn btn-primary" type="submit">singin</button>
+              
+            </form>
+    
+   
+</div>
